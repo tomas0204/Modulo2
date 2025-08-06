@@ -1,4 +1,4 @@
-let nota;
+let nota
 
 while (true) {
     nota = parseInt(prompt("Escriba una nota del 0 al 10, para determinar la calificación"));
