@@ -71,18 +71,18 @@ class Tareas {
     }
 
     borrarTarea() {
-        const botones = document.querySelectorAll(".btn-danger");
+        const botones = document.querySelectorAll(".btn-danger")
         botones.forEach(boton => {
             boton.addEventListener("click", (e) => {
-                const card = e.target.closest(".card");                       // 1 encontrar la card
-                const textoTarea = card.querySelector(".card-text").textContent; // 2 obtener el texto
-                card.remove();                                                // 3 eliminar la card del DOM
+                const card = e.target.closest(".card")                       // 1 encontrar la card
+                const textoTarea = card.querySelector(".card-text").textContent // 2 obtener el texto
+                card.remove()                                               // 3 eliminar la card del DOM
 
                 // 4 eliminar del array interno
-                this.tareas = this.tareas.filter(t => t !== textoTarea);     
-                console.log(this.tareas);       
-            });
-        });
+                this.tareas = this.tareas.filter(t => t !== textoTarea)    
+                console.log(this.tareas)      
+            })
+        })
     }
 
     agregarTarea(e) {
